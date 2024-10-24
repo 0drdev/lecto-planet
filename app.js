@@ -21,6 +21,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.use('/', indexRouter)
 
+// Middlewares error and 404
 app.use(handle404)
 app.use(errorHandler)
 

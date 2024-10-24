@@ -1,0 +1,8 @@
+### All Book - home page
+http://localhost:5858/
+
+### showMovie
+http://localhost:5858/books/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+
+#search genre
+http://localhost:5858/genres/

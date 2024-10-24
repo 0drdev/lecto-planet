@@ -1,8 +1,15 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  width: 100%; /* Ocupa todo el ancho disponible */
+  max-width: 1920px; /* Limita el ancho máximo a 1920px */
+  margin: 0 auto !important; /* Centra el contenido horizontalmente */
+  padding: 50px; /* Espaciado interno */
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; /* Tipografía */
 }
 
 a {
-  color: #00B7FF;
+  color: #00B7FF; /* Color de los enlaces */
+}
+.contain-poster{
+  height: 382px;
+  align-content: center;
 }

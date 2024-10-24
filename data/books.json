@@ -1,0 +1,112 @@
+[
+  {
+    "id": "dcdd0fad-a94c-4810-8acc-5f108d3b18c3",
+    "title": "One Hundred Years of Solitude",
+    "author": "Gabriel García Márquez",
+    "description": "A masterpiece of Latin American literature that tells the story of the Buendía family in the fictional town of Macondo.",
+    "cover": "https://covers.openlibrary.org/b/id/5617719-L.jpg",
+    "publisher": "Editorial Sudamericana",
+    "year": 1967,
+    "rating": 4.7,
+    "genre": "Novel"
+  },
+  {
+    "id": "c8a7d63f-3b04-44d3-9d95-8782fd7dcfaf",
+    "title": "Don Quixote",
+    "author": "Miguel de Cervantes",
+    "description": "The story of a nobleman who decides to become a knight-errant and lives numerous adventures.",
+    "cover": "https://covers.openlibrary.org/b/id/5461340-L.jpg",
+    "publisher": "Francisco de Robles",
+    "year": 1605,
+    "rating": 4.6,
+    "genre": "Novel"
+  },
+  {
+    "id": "5ad1a235-0d9c-410a-b32b-220d91689a08",
+    "title": "1984",
+    "author": "George Orwell",
+    "description": "A dystopian novel that explores themes of surveillance, totalitarianism, and truth manipulation.",
+    "cover": "https://covers.openlibrary.org/b/id/7246348-L.jpg",
+    "publisher": "Secker & Warburg",
+    "year": 1949,
+    "rating": 4.2,
+    "genre": "Dystopian Fiction"
+  },
+  {
+    "id": "241bf55d-b649-4109-af7c-0e6890ded3fc",
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "description": "A love story and misunderstandings in 19th century England, centered on the life of Elizabeth Bennet.",
+    "cover": "https://covers.openlibrary.org/b/id/8304730-L.jpg",
+    "publisher": "T. Egerton",
+    "year": 1813,
+    "rating": 4.5,
+    "genre": "Romance"
+  },
+  {
+    "id": "9e6106f0-848b-4810-a11a-3d832a5610f9",
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "description": "A portrait of the Jazz Age in America, centered on the life of the mysterious millionaire Jay Gatsby.",
+    "cover": "https://covers.openlibrary.org/b/id/7342928-L.jpg",
+    "publisher": "Charles Scribner's Sons",
+    "year": 1925,
+    "rating": 4.4,
+    "genre": "Fiction"
+  },
+  {
+    "id": "7e3fd5ab-60ff-4ae2-92b6-9597f0308d1",
+    "title": "Moby Dick",
+    "author": "Herman Melville",
+    "description": "The story of Captain Ahab's obsession with hunting the white whale, Moby Dick.",
+    "cover": "https://covers.openlibrary.org/b/id/6109348-L.jpg",
+    "publisher": "Harper & Brothers",
+    "year": 1851,
+    "rating": 4.0,
+    "genre": "Adventure"
+  },
+  {
+    "id": "c906673b-3948-4402-ac7f-73ac3a9e3105",
+    "title": "Crime and Punishment",
+    "author": "Fyodor Dostoevsky",
+    "description": "A novel that examines morality through the story of a young man who commits murder.",
+    "cover": "https://covers.openlibrary.org/b/id/8250190-L.jpg",
+    "publisher": "The Russian Messenger",
+    "year": 1866,
+    "rating": 4.5,
+    "genre": "Psychological Fiction"
+  },
+  {
+    "id": "b6e03689-cccd-478e-8565-d92f40813b13",
+    "title": "The Trial",
+    "author": "Franz Kafka",
+    "description": "The story of a man who is arrested and tried for a crime that is never revealed to him.",
+    "cover": "https://covers.openlibrary.org/b/id/6857348-L.jpg",
+    "publisher": "Willem Schmidt",
+    "year": 1925,
+    "rating": 4.1,
+    "genre": "Fiction"
+  },
+  {
+    "id": "aa391090-b938-42eb-b520-86ea0aa3917b",
+    "title": "Fahrenheit 451",
+    "author": "Ray Bradbury",
+    "description": "A dystopian novel about a future where books are banned and firefighters burn any books they find.",
+    "cover": "https://covers.openlibrary.org/b/id/6548560-L.jpg",
+    "publisher": "Ballantine Books",
+    "year": 1953,
+    "rating": 4.3,
+    "genre": "Dystopian Fiction"
+  },
+  {
+    "id": "2e6900e2-0b48-4fb6-ad48-09c7086e54fe",
+    "title": "The Alchemist",
+    "author": "Paulo Coelho",
+    "description": "The story of a young shepherd who seeks treasure and discovers his true destiny.",
+    "cover": "https://covers.openlibrary.org/b/id/8235467-L.jpg",
+    "publisher": "HarperCollins",
+    "year": 1988,
+    "rating": 4.3,
+    "genre": "Fiction"
+  }
+]

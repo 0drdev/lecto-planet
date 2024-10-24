@@ -1,0 +1,17 @@
+<div class="d-flex row col-12 justify-content-center gap-md-3 gap-lg-4 gap-xl-5">
+    <% books.forEach(book=> { %>
+      <article class="card-book col-12 col-md-5 col-lg-5 col-xl-3 card bg-transparent my-2 p-2">
+        <div class="text-center contain-poster">
+          <img src="<%= book.cover %>" class="card-img-top" alt="<%= book.title %>" style="width: 13rem;">
+        </div>
+        <div class="card-body">
+          <h2 class="card-title text-center py-3">
+            <%= book.title %>
+          </h2>
+          <div class="text-center">
+            <a href="/books/<%= book.id %>" class="text-success-emphasis">View more details</a>
+          </div>
+        </div>
+      </article>
+      <% }); %>
+  </div>
