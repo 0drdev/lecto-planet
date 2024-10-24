@@ -1,13 +1,15 @@
 const fs = require('node:fs')
 const path = require('path')
 
-const data = fs.readFileSync(path.join('data', 'books.json'), 'utf8')
-const books = JSON.parse(data)
+// Lee el archivo genres.json
+const genresData = fs.readFileSync(path.join('data', 'genres.json'), 'utf8')
+const genres = JSON.parse(genresData)
 
 const GenreController = {
   allGenres: (req, res) => {
-    const genres = [...new Set(books.map((book) => book.genre))]
+    // Filtra la lista de géneros para enviarlos a la vista
     res.render('genres/genres', { title: 'LectoPlanet', genres })
   }
 }
+
 module.exports = GenreController

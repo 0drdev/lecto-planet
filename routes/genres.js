@@ -5,6 +5,6 @@ const router = express.Router()
 
 router.get('/', GenreController.allGenres)
 
-router.get('/:genre', BookController.booksByGenre)
+router.get('/:name', BookController.booksByGenre)
 
 module.exports = router

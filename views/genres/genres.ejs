@@ -18,8 +18,8 @@
         <ul class="list-group col-12 col-md-5 mx-auto bg-dark-subtle text-center">
             <% genres.forEach(genre=> { %>
                 <li class="list-group-item list-group-flush bg-transparent">
-                    <a href="/genres/<%= genre %>" class="text-decoration-none text-black">
-                        <%= genre %>
+                    <a href="/genres/<%= genre.name %>" class="text-decoration-none text-black">
+                        <%= genre.name %>
                     </a>
                 </li>
                 <% }) %>
