@@ -11,12 +11,12 @@ const authMiddlware = require('../middlewares/authMiddlware')
 router.get('/', authMiddlware, BookController.allBooks)
 
 // routes user
-router.use('/user', authMiddlware, userRouter)
+router.use('/user', userRouter)
 // routes books
 router.use('/books', authMiddlware, booksRouter)
 // routes genres
 router.use('/genres', authMiddlware, genresRouter)
 // routes admin
-router.use('/admin', authMiddlware, adminRouter)
+router.use('/admin', adminRouter)
 
 module.exports = router
