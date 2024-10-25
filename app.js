@@ -4,6 +4,7 @@ const cookieParser = require('cookie-parser')
 const logger = require('morgan')
 const indexRouter = require('./routes/index')
 const { errorHandler, handle404 } = require('./middlewares/errorHandler')
+const authMiddlware = require('./middlewares/authMiddlware')
 const app = express()
 
 // Initialized enviroment variables
@@ -24,6 +25,8 @@ app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
 
 app.use('/', indexRouter)
+
+app.use(authMiddlware)
 
 // Middlewares error and 404
 app.use(handle404)

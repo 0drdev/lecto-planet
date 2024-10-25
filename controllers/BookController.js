@@ -11,19 +11,22 @@ const genres = JSON.parse(genresData)
 
 const BookController = {
   allBooks: (req, res) => {
-    res.render('index', { title: 'LectoPlanet', books })
+    const user = req.user || null // Get the user of the request
+    res.render('index', { title: 'LectoPlanet', books, user })
   },
 
   showBook: (req, res) => {
+    const user = req.user || null // Get the user of the request
     const book = books.find((book) => book.id === req.params.id)
     if (book) {
-      return res.render('movie/movie', { title: 'LectoPlanet', book })
+      return res.render('movie/movie', { title: 'LectoPlanet', book, user })
     } else {
       res.status(404).send('Libro no encontrado')
     }
   },
 
   booksByGenre: (req, res) => {
+    const user = req.user || null // Get the user of the request
     const { genreId, name } = req.params
 
     let genre
@@ -46,7 +49,8 @@ const BookController = {
       res.render('genres/books', {
         title: `Libros de ${genre.name}`,
         books: filteredBooks,
-        genre: genre.name
+        genre: genre.name,
+        user
       })
     } else {
       res.status(404).send('No hay libros en este género')

@@ -9,18 +9,20 @@ const users = JSON.parse(usersData)
 
 const UserController = {
   login: (req, res) => {
-    const token = req.cookies.token // Get the token cookie
-    let user = null //  Initialise user as null
+    const token = req.cookies.token
+    let user = null
 
     if (token) {
       try {
-        // Attempt to decode the token
         user = jwt.verify(token, SECRET_KEY)
+        // Si el usuario ya está autenticado, redirige a la página principal o a otra
+        return res.redirect('/') // O la ruta que consideres apropiada
       } catch (error) {
         console.error(error)
       }
     }
-    res.render('login', { title: 'LectPlanet', user }) // Pasa user a la vista
+
+    res.render('login', { title: 'LectoPlanet', user }) // Pasa user como null para la vista de login
   },
   processLogin: async (req, res) => {
     const { email, password, checkbox } = req.body
@@ -64,8 +66,6 @@ const UserController = {
         expiresIn: '1h'
       }
     )
-    const decodedToken = jwt.verify(token, SECRET_KEY)
-    console.log('User is autenticated!: ' + decodedToken.issuedAt)
     // Store token in a secure cookie (httpOnly for security)
     res.cookie('token', token, { httpOnly: true, maxAge: 3600000 }) // Cookie last 1h
     console.log(token)

@@ -7,8 +7,9 @@ const genres = JSON.parse(genresData)
 
 const GenreController = {
   allGenres: (req, res) => {
+    const user = req.user || null // Get the user of the request
     // Filtra la lista de géneros para enviarlos a la vista
-    res.render('genres/genres', { title: 'LectoPlanet', genres })
+    res.render('genres/genres', { title: 'LectoPlanet', genres, user })
   }
 }
 
