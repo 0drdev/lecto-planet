@@ -9,7 +9,18 @@ const users = JSON.parse(usersData)
 
 const UserController = {
   login: (req, res) => {
-    res.render('login', { title: 'LectPlanet' })
+    const token = req.cookies.token // Get the token cookie
+    let user = null //  Initialise user as null
+
+    if (token) {
+      try {
+        // Attempt to decode the token
+        user = jwt.verify(token, SECRET_KEY)
+      } catch (error) {
+        console.error(error)
+      }
+    }
+    res.render('login', { title: 'LectPlanet', user }) // Pasa user a la vista
   },
   processLogin: async (req, res) => {
     const { email, password, checkbox } = req.body
