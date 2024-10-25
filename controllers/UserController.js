@@ -1,6 +1,8 @@
 const fs = require('fs')
 const path = require('path')
 const bcrypt = require('bcrypt')
+const jwt = require('jsonwebtoken')
+const SECRET_KEY = process.env.SECRET_KEY || 'miSuperSecreto'
 
 const usersData = fs.readFileSync(path.join('data', 'users.json'), 'utf8')
 const users = JSON.parse(usersData)
@@ -38,8 +40,31 @@ const UserController = {
         error: 'Debes aceptar los términos y condiciones'
       })
     }
+    // Generate token
+    const token = jwt.sign(
+      {
+        name: user.name,
+        email: user.email,
+        role: user.role,
+        issuedAt: new Date().toISOString() // Add date and time of generation
+      },
+      SECRET_KEY,
+      {
+        expiresIn: '1h'
+      }
+    )
+    const decodedToken = jwt.verify(token, SECRET_KEY)
+    console.log('User is autenticated!: ' + decodedToken.issuedAt)
+    // Store token in a secure cookie (httpOnly for security)
+    res.cookie('token', token, { httpOnly: true, maxAge: 3600000 }) // Cookie last 1h
+    console.log(token)
+
     res.redirect('/admin')
-    // res.redirect('/admin')
+  },
+  logout: (req, res) => {
+    res.clearCookie('token')
+    console.log('User is desconnected!')
+    res.redirect('/user/login') // Redirect to form login
   }
 }
 module.exports = UserController
