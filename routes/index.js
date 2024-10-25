@@ -4,6 +4,7 @@ const BookController = require('../controllers/BookController')
 const userRouter = require('./users')
 const booksRouter = require('./books')
 const genresRouter = require('./genres')
+const adminRouter = require('./admin')
 
 /* GET home page. */
 router.get('/', BookController.allBooks)
@@ -14,5 +15,7 @@ router.use('/user', userRouter)
 router.use('/books', booksRouter)
 // routes genres
 router.use('/genres', genresRouter)
+// routes admin
+router.use('/admin', adminRouter)
 
 module.exports = router

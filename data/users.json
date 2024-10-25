@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Juan",
+    "email": "juan@example.com",
+    "password": "$2a$10$S7YQB/cyrJg.c.RNTezY1e8lwE.HcotkFC9q0d0EIeSTxCDLl00Cq",
+    "role": "admin"
+  },
+  {
+    "name": "Maria",
+    "email": "maria@example.com",
+    "password": "$2a$10$S7YQB/cyrJg.c.RNTezY1e8lwE.HcotkFC9q0d0EIeSTxCDLl00Cq",
+    "role": "editor"
+  },
+  {
+    "name": "Luis",
+    "email": "luis@example.com",
+    "password": "$2a$10$S7YQB/cyrJg.c.RNTezY1e8lwE.HcotkFC9q0d0EIeSTxCDLl00Cq",
+    "role": "client"
+  }
+]
